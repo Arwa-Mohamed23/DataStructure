@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1734634449 source:/home/arwa/Documents/DataStructure/Queue/main.cpp
+	<iostream>
+	"QueueLinkedList.h"
+	"circularQueue.h"
+
+1734628370 /home/arwa/Documents/DataStructure/Queue/include/QueueLinkedList.h
+	"Node.h"
+
+1734626548 /home/arwa/Documents/DataStructure/Queue/include/Node.h
+
+1734634800 /home/arwa/Documents/DataStructure/Queue/include/circularQueue.h
+

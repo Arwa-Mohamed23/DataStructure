@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1734624488 source:/home/arwa/Documents/DataStructure/stack/main.cpp
+	<iostream>
+	"StackLinkedList.h"
+	"StackArray.h"
+
+1734622961 /home/arwa/Documents/DataStructure/stack/include/StackLinkedList.h
+	"Node.h"
+
+1734619882 /home/arwa/Documents/DataStructure/stack/include/Node.h
+
+1734624537 /home/arwa/Documents/DataStructure/stack/include/StackArray.h
+

@@ -4,12 +4,12 @@ using namespace std;
 
 int main()
 {
-    LinkedList<int> l;
-    l.add(10);
-    l.add(20);
-    l.add(30);
-    l.add(40);
-    l.add(50);
+    LinkedList<char> l;
+    l.add('a');
+    l.add('b');
+    l.add('c');
+    l.add('d');
+    l.add('e');
     l.display();
     cout<<endl<<l.getCount();
     try
@@ -24,13 +24,29 @@ int main()
 
     try
     {
-        l.insertAfter(35,30);
-        l.insertBefore(25,10);
+        l.insertAfter('h','d');
+        l.insertBefore('h','a');
     }
     catch(char const * msg)
     {
-        cout<<msg<<endl;
+        cout<<endl<<msg<<endl;
     }
+    cout<<"linked list after insert: "<<endl;
+    l.display();
+    try
+    {
+        l.removeData('e');
+        l.removeData('z');
+    }
+    catch(char const * msg)
+    {
+        cout<<endl<<msg<<endl;
+    }
+    cout<<"linked list after delet: "<<endl;
+    l.display();
+    cout<<endl;
+    l.removeAllData('h');
+    cout<<"linked list after delet: "<<endl;
     l.display();
     return 0;
 }

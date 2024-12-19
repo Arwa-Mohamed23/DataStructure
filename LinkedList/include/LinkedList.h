@@ -48,7 +48,8 @@ public:
     void insertAfter(T data, T afterdata)
     {
         Node<T> * current=getData(afterdata);
-        if(current==nullptr){
+        if(current==nullptr)
+        {
             throw "Data not found";
         }
         if(current==tail)
@@ -62,13 +63,14 @@ public:
             current->next=current->next->prev;
             current->next->prev=current;
         }
-         counter++;
+        counter++;
     }
 
     void insertBefore (T data, T beforedata)
     {
         Node<T> * current=getData(beforedata);
-        if(current==nullptr){
+        if(current==nullptr)
+        {
             throw "Data not found";
         }
         if(current==head)
@@ -85,7 +87,7 @@ public:
             current->prev=current->prev->next;
             current->prev->next=current;
         }
-         counter++;
+        counter++;
     }
 
     void display()
@@ -116,6 +118,60 @@ public:
             current=current->next;
         }
         throw "Index not found";
+    }
+
+    void removeData(T data)
+    {
+        Node<T> * current=getData(data);
+        if(current==nullptr)
+        {
+            throw "Data not found";
+        }
+        if(current==head&&current==tail)
+        {
+            head=nullptr;
+            tail=nullptr;
+        }
+        else if(current==head)
+        {
+            head=head->next;
+            head->prev=nullptr;
+        }
+        else if(current==tail)
+        {
+            tail=tail->prev;
+            tail->next=nullptr;
+        }
+        else
+        {
+            current->prev->next=current->next;
+            current->next->prev=current->prev;
+        }
+        delete current;
+    }
+
+    void removeAllData(T data)
+    {
+        try
+        {
+            while(1){
+                removeData(data);
+            }
+        }
+        catch(char const * msg)
+        {
+            return ;
+        }
+    }
+
+    ~LinkedList()
+    {
+        while(head->next!=nullptr)
+        {
+            head=head->next;
+            delete head->prev;
+        }
+        delete head;
     }
 
 

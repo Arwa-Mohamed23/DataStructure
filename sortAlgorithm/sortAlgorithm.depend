@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1734792887 source:/home/arwa/Documents/DataStructure/sortAlgorithm/main.cpp
+	<iostream>
+	"include/Sort.h"
+
+1734794149 /home/arwa/Documents/DataStructure/sortAlgorithm/include/Sort.h
+

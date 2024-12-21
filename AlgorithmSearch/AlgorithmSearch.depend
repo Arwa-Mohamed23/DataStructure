@@ -1,0 +1,10 @@
+# depslib dependency file v1.0
+1734700878 source:/home/arwa/Documents/DataStructure/AlgorithmSearch/main.cpp
+	<iostream>
+	"../LinkedList/include/LinkedList.h"
+
+1734700925 /home/arwa/Documents/DataStructure/LinkedList/include/LinkedList.h
+	"Node.h"
+
+1734373322 /home/arwa/Documents/DataStructure/LinkedList/include/Node.h
+

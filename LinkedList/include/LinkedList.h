@@ -154,7 +154,8 @@ public:
     {
         try
         {
-            while(1){
+            while(1)
+            {
                 removeData(data);
             }
         }
@@ -166,12 +167,12 @@ public:
 
     ~LinkedList()
     {
-        while(head->next!=nullptr)
+        while (head != nullptr)
         {
-            head=head->next;
-            delete head->prev;
+            Node<T>* temp = head;
+            head = head->next;
+            delete temp;
         }
-        delete head;
     }
 
 

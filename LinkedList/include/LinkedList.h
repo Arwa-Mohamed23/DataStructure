@@ -21,6 +21,7 @@ private:
         }
         return nullptr;
     }
+
 public:
     LinkedList()
     {
@@ -98,6 +99,7 @@ public:
             std::cout<<current->data<<"\t";
             current=current->next;
         }
+        std::cout<<endl;
     }
 
     int getCount()
@@ -163,6 +165,50 @@ public:
         {
             return ;
         }
+    }
+
+    void bubbleSort()
+    {
+        int sorted=0;
+        Node<T> * current;
+        while(!sorted)
+        {
+            sorted=1;
+            current=head;
+            while(current->next!=nullptr)
+            {
+                if(current->data > current->next->data)
+                {
+                    T temp=current->data;
+                    current->data=current->next->data;
+                    current->next->data=temp;
+                    sorted=0;
+                }
+                current=current->next;
+            }
+        }
+    }
+
+    int BinarySearch(T item)
+    {
+        int start=1,end=this->getCount(),mid;
+        while(start<=end)
+        {
+            mid=(start+end)/2;
+            if(getDataByIndex(mid)<item)
+            {
+                start=mid+1;
+            }
+            else if(getDataByIndex(mid)>item)
+            {
+                end=mid-1;
+            }
+            else
+            {
+                return mid;
+            }
+        }
+        return -1;
     }
 
     ~LinkedList()
